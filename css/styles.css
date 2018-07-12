@@ -91,18 +91,18 @@ body {
   text-align: left;
   padding-top: 20vh;
   padding-left: 9vw;
-  flex-basis:900px;
+  flex-basis:950px;
   flex-grow: 1;
   flex-shrink:1;
 }
 
 .body .left .details {
-  padding-right: 60px;
+  padding-right: 0px;
   padding-left: 5px;
 }
 
 .left .details p{
-  line-height: 1rem;
+  line-height: 1.2rem;
   color: rgb(136,136,136);
 }
 
@@ -148,7 +148,7 @@ body {
   text-transform: uppercase;
   position: fixed;
   bottom: 45px;
-  left: 20px;
+  left: -15px;
   color: rgb(17,17,17);
 }
 
@@ -166,7 +166,7 @@ body {
   RIGHT - IMAGE
 *****************************/
 .body .right {
-  flex-basis: 900px;
+  flex-basis: 950px;
   flex-grow: 1;
   flex-shrink: 1;
   position: relative;
