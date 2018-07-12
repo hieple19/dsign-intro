@@ -35,13 +35,14 @@ body {
 }
 
 .topnav #brand {
-  flex-basis: 33.3%;
+  flex-grow: 1;
+  flex-shrink: 3;
   padding-left: 50px;
   font-size: 1.4rem;
 }
 
 .topnav .main {
-  flex-basis: 33.3%;
+  flex-grow: 1;
   text-align: center;
   font-size: 0.85rem;
 }
@@ -52,7 +53,8 @@ body {
 
 .topnav #sub{
   padding-right: 70px;
-  flex-basis: 33.3%;
+  flex-grow: 1;
+  flex-shrink: 3;
   text-align: right;
 }
 
@@ -78,7 +80,6 @@ body {
   overflow: hidden;
   display: flex;
   height: var(--content-height);
-  flex-grow: 1;
   flex-direction: row;
 }
 
@@ -90,7 +91,9 @@ body {
   text-align: left;
   padding-top: 20vh;
   padding-left: 9vw;
-  flex: 1;
+  flex-basis:900px;
+  flex-grow: 1;
+  flex-shrink:1;
 }
 
 .body .left .details {
@@ -163,7 +166,9 @@ body {
   RIGHT - IMAGE
 *****************************/
 .body .right {
-  flex: 1;
+  flex-basis: 900px;
+  flex-grow: 1;
+  flex-shrink: 1;
   position: relative;
 }
 
