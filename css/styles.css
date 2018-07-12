@@ -1,0 +1,202 @@
+/*****************************
+  BASE SETUP
+*****************************/
+
+html {
+  box-sizing: border-box; /* use IE box model */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; /* inherit allows for easy creation of a new box model context further down the tree */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; /* smoother rendering of fonts */
+}
+
+:root {
+  --nav-height: 80px;
+  --content-height: calc(100vh - var(--nav-height));
+}
+
+/*****************************
+  Header Bar 
+*****************************/
+.topnav {
+  line-height: var(--nav-height);
+  height: var(--nav-height);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+}
+
+.topnav #brand {
+  flex-basis: 33.3%;
+  padding-left: 50px;
+  font-size: 1.4rem;
+}
+
+.topnav .main {
+  flex-basis: 33.3%;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.topnav .main a{
+  color:rgb(136,136,136);
+}
+
+.topnav #sub{
+  padding-right: 70px;
+  flex-basis: 33.3%;
+  text-align: right;
+}
+
+.topnav #subbutton {
+  border: 1px solid black;
+  padding: 5px 20px;
+  border-radius: 14px;
+  line-height: 30px;
+  font-size: 0.85rem;
+}
+
+.topnav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(17, 17, 17);
+  padding: 15px;
+}
+
+/*****************************
+  BODY SETUP
+*****************************/
+.body {
+  overflow: hidden;
+  display: flex;
+  height: var(--content-height);
+  flex-grow: 1;
+  flex-direction: row;
+}
+
+/*****************************
+  LEFT - TEXT 
+*****************************/
+.body .left {
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  padding-top: 20vh;
+  padding-left: 9vw;
+  flex: 1;
+}
+
+.body .left .details {
+  padding-right: 60px;
+  padding-left: 5px;
+}
+
+.left .details p{
+  line-height: 1rem;
+  color: rgb(136,136,136);
+}
+
+/* Hr style from https://codepen.io/ibrahimjabbari/pen/ozinB*/
+.left .details hr {
+  width: 30%;
+  margin: 15px;
+  padding: 0;
+  border: 0; 
+  height: 2px; 
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+.left .tagline h1 {
+  font-weight: normal;
+  font-size: 2.8rem;
+  line-height: 5.5rem;
+  margin-left: -3px;
+}
+
+.left .next{
+  margin-top: 50px;
+  margin-left: 3px;
+  text-transform: uppercase;
+  color: rgb(17,17,17);
+}
+
+.left .next hr{
+  position: relative;
+  right: -10px;
+  bottom: -6px;
+  height: 4px;
+  background-color: rgb(17,17,17);
+  width: 30px;
+  display: inline-block;
+}
+
+.left .scroll{
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 45px;
+  left: 20px;
+  color: rgb(17,17,17);
+}
+
+.left .scroll hr{
+  position: relative;
+  bottom: -4px;
+  margin-right: 2px;
+  height: 4px;
+  background-color: rgb(17,17,17);
+  width: 30px;
+  display: inline-block;
+}
+
+/*****************************
+  RIGHT - IMAGE
+*****************************/
+.body .right {
+  flex: 1;
+  position: relative;
+}
+
+.right .outer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 116, 110, 0.35);
+  clip-path: circle(62.5% at 75% 70%);
+}
+
+.right .mid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(255, 116, 110, 0.65);
+  clip-path: circle(59% at 75% 70%);
+}
+
+.right .inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(255, 116, 110);
+  clip-path: circle(55.5% at 75% 70%);
+}
+.right .image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../images/nighttime.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 700px;
+  clip-path: circle(52% at 75% 70%);
+}
